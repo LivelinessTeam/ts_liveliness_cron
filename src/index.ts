@@ -1,7 +1,7 @@
 import * as express from "express";
 import * as cron from "node-cron";
 import * as cors from "cors";
-import axios from "axios"; // Import axios to make HTTP requests
+import axios from "axios";
 
 const app = express();
 
