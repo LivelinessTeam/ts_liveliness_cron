@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-       "types": ["node", "dotenv/config"],
+       "types": ["node"],
        "lib": [
           "es5",
           "es6"
