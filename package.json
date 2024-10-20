@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc && nodemon build/index.js",
-    "start": "ts-node src/index.ts",
-    "start-on-heroku": "node ./build/index.js",
     "build": "tsc",
-    "serve": "tsc && node build/index.js",
-    "typeorm": "typeorm-ts-node-commonjs"
+    "start": "node build/index.js"
   },
   "author": "",
   "license": "ISC",
