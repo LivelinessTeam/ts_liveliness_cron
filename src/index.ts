@@ -10,6 +10,9 @@ const EVENT_SERVER_URL =
 const SUBSCRIPTION_COUPON_SERVER_URL =
   "https://prod-ts-liveliness-server.onrender.com/api/subscriptionsPurchase/updateCoupon";
 
+const EVENT_24_HOURS_SERVER_URL =
+  "https://prod-ts-liveliness-server.onrender.com/api/event/notifBefore24";
+
 const runJob = async () => {
   console.log("Cron job triggered. Making requests to main server...");
 
@@ -21,6 +24,8 @@ const runJob = async () => {
     const response2 = await axios.post(SUBSCRIPTION_COUPON_SERVER_URL, {
       dateTime: new Date().toISOString(),
     });
+
+    axios.post(EVENT_24_HOURS_SERVER_URL);
     console.log(
       "Response from subscription purchase function:",
       response2.data
