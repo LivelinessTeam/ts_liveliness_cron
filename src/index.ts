@@ -25,14 +25,14 @@ const runJob = async () => {
       dateTime: new Date().toISOString(),
     });
 
-    axios.post(EVENT_24_HOURS_SERVER_URL);
+    const response3 = await axios.post(EVENT_24_HOURS_SERVER_URL);
     console.log(
       "Response from subscription purchase function:",
       response2.data
     );
     process.exit(0);
   } catch (error) {
-    console.error("Error making GET request to main server:", error.message);
+    console.error(error.message);
     process.exit(1);
   }
 };
