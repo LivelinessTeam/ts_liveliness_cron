@@ -10,7 +10,7 @@ const EVENT_SERVER_URL =
 const SUBSCRIPTION_COUPON_SERVER_URL =
   "https://prod-ts-liveliness-server.onrender.com/api/subscriptionsPurchase/updateCoupon";
 
-const EVENT_24_HOURS_SERVER_URL =
+const EVENT_24_HOURS_SERVER_URL = 
   "https://prod-ts-liveliness-server.onrender.com/api/event/notifBefore24";
 
 const runJob = async () => {
@@ -25,11 +25,12 @@ const runJob = async () => {
       dateTime: new Date().toISOString(),
     });
 
+    console.log("Response from subscription coupon update function:", response2.data);
+
     const response3 = await axios.post(EVENT_24_HOURS_SERVER_URL);
-    console.log(
-      "Response from subscription purchase function:",
-      response2.data
-    );
+
+    console.log("Response from event 24 hours notification function:", response3.data);
+    
     process.exit(0);
   } catch (error) {
     console.error(error.message);
