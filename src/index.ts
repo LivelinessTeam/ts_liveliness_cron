@@ -3,15 +3,18 @@ import * as cron from "node-cron";
 import * as cors from "cors";
 import axios from "axios";
 
+const baseServerUrl = "https://prod-ts-liveliness-server.onrender.com";
+// const baseServerUrl = "http://localhost:3000";
+
 // Define the endpoint for the cron job to call
 const EVENT_SERVER_URL =
-  "https://prod-ts-liveliness-server.onrender.com/api/session/cron/job"; // Replace with your actual server's endpoint
+  `${baseServerUrl}/api/session/cron/job`; // Replace with your actual server's endpoint
 
 const SUBSCRIPTION_COUPON_SERVER_URL =
-  "https://prod-ts-liveliness-server.onrender.com/api/subscriptionsPurchase/updateCoupon";
+   `${baseServerUrl}/api/subscriptionsPurchase/updateCoupon`;
 
 const EVENT_24_HOURS_SERVER_URL = 
-  "https://prod-ts-liveliness-server.onrender.com/api/event/notifBefore24";
+   `${baseServerUrl}/api/event/notifBefore24`;
 
 const runJob = async () => {
   console.log("Cron job triggered. Making requests to main server...");
