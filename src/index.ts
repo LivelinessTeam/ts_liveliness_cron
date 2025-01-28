@@ -24,12 +24,14 @@ const runJob = async () => {
     const response1 = await axios.get(EVENT_SERVER_URL);
     console.log("Response from event creation function:", response1.data);
 
-    const response2 = await axios.post(SUBSCRIPTION_COUPON_SERVER_URL, {
-      dateTime: new Date().toISOString(),
-    });
+    // const response2 = await axios.post(SUBSCRIPTION_COUPON_SERVER_URL, {
+    //   dateTime: new Date().toISOString(),
+    // });
 
-    console.log("Response from subscription coupon update function:", response2.data);
+    // console.log("Response from subscription coupon update function:", response2.data);
 
+    /////////////// 
+    console.log(EVENT_24_HOURS_SERVER_URL);
     const response3 = await axios.post(EVENT_24_HOURS_SERVER_URL);
 
     console.log("Response from event 24 hours notification function:", response3.data);
