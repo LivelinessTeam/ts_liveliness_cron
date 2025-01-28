@@ -16,6 +16,9 @@ const SUBSCRIPTION_COUPON_SERVER_URL =
 const EVENT_24_HOURS_SERVER_URL = 
    `${baseServerUrl}/api/event/notifBefore24`;
 
+const CLUB_NEWSLETTER_SERVER_URL =
+    `${baseServerUrl}/api/club/sendNewsletter`;
+
 const runJob = async () => {
   console.log("Cron job triggered. Making requests to main server...");
 
@@ -35,6 +38,13 @@ const runJob = async () => {
     const response3 = await axios.post(EVENT_24_HOURS_SERVER_URL);
 
     console.log("Response from event 24 hours notification function:", response3.data);
+
+    ///////////////
+    // if date is 1st of month, the run the newsletter function
+    if( new Date().getDate() === 1){
+      const response4 = await axios.get(CLUB_NEWSLETTER_SERVER_URL);
+      console.log("Response from club newsletter function:", response4.data);
+    }
     
     process.exit(0);
   } catch (error) {
