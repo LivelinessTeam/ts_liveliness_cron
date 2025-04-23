@@ -41,10 +41,10 @@ const runJob = async () => {
 
     ///////////////
     // if date is 1st of month, the run the newsletter function
-    // if( new Date().getDate() === 1){
+    if( new Date().getDate() === 1){
       const response4 = await axios.get(CLUB_NEWSLETTER_SERVER_URL);
       console.log("Response from club newsletter function:", response4.data);
-    // }
+    }
     
     process.exit(0);
   } catch (error) {
