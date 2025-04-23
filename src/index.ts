@@ -17,7 +17,7 @@ const EVENT_24_HOURS_SERVER_URL =
    `${baseServerUrl}/api/event/notifBefore24`;
 
 const CLUB_NEWSLETTER_SERVER_URL =
-    `${baseServerUrl}/api/club/sendNewsletter`;
+    `${baseServerUrl}/api/club/sendNewsletter/sendEmails`;
 
 const runJob = async () => {
   console.log("Cron job triggered. Making requests to main server...");
