@@ -16,6 +16,9 @@ const SUBSCRIPTION_COUPON_SERVER_URL =
 const EVENT_24_HOURS_SERVER_URL = 
    `${baseServerUrl}/api/event/notifBefore24`;
 
+const EVENT_FEEDBACK_SERVER_URL = 
+   `${baseServerUrl}/api/event/feedback/email`;
+
 const CLUB_NEWSLETTER_SERVER_URL =
     `${baseServerUrl}/api/club/sendNewsletter/sendEmails`;
 
@@ -39,6 +42,12 @@ const runJob = async () => {
 
     console.log("Response from event 24 hours notification function:", response3.data);
 
+    try { 
+      const response4 = await axios.post(EVENT_FEEDBACK_SERVER_URL);
+      console.log("Response from event feedback function:", response4.data);
+    } catch(error) {
+      console.log("Error in event feedback function:", error.message); 
+    }
     ///////////////
     // if date is 1st of month, the run the newsletter function
     if( new Date().getDate() === 1){
