@@ -12,8 +12,10 @@ const runJob = async () => {
     try {
         const response = await axios.post(EVENT_1_HOURS_SERVER_URL);
         console.log("Response from event 1 hour notification function:", response.data);
+        process.exit(0);
     } catch (error) {
         console.error("Error in event 1 hour notification function:", error.message);
+        process.exit(1);
     }
 }
 
