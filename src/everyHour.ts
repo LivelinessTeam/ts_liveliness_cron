@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const baseServerUrl = "https://prod-ts-liveliness-server.onrender.com";
-const baseServerUrl = "http://localhost:3000";
+const baseServerUrl = "https://prod-ts-liveliness-server.onrender.com";
+// const baseServerUrl = "http://localhost:3000";
 
 
 const EVENT_1_HOURS_SERVER_URL =
