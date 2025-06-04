@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "every-hour": "node build/everyHour.js"
   },
   "author": "",
   "license": "ISC",
