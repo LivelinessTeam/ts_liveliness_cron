@@ -37,11 +37,11 @@ const runJob = async () => {
     // console.log("Response from subscription coupon update function:", response2.data);
 
 
-    /////////////// 
-    console.log(EVENT_24_HOURS_SERVER_URL);
-    const response3 = await axios.post(EVENT_24_HOURS_SERVER_URL);
+    // /////////////// 
+    // console.log(EVENT_24_HOURS_SERVER_URL);
+    // const response3 = await axios.post(EVENT_24_HOURS_SERVER_URL);
 
-    console.log("Response from event 24 hours notification function:", response3.data);
+    // console.log("Response from event 24 hours notification function:", response3.data);
 
     try { 
       const response4 = await axios.post(EVENT_FEEDBACK_SERVER_URL);
